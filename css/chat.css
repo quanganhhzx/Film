@@ -28,7 +28,14 @@
   color: white;
   position: sticky;
   top:0;
-  background: #333
+  background: #252525;
+}
+.web-films .header{
+  padding: 20px;
+  color: white;
+  position: sticky;
+  top:0;
+  background: #252525;
 }
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 /*reset css*/

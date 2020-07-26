@@ -48,6 +48,7 @@ model.loadConversations = () => {
     view.showCurrentConversation()
   })
 }
+
 model.addMessage = (message) => {
   const dataToUpdate = {
     messages  : firebase.firestore.FieldValue.arrayUnion(message),
