@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.logout{
+    display: flex;
+    align-items: center;
+}
+.d-flex{
+    width: 50%;
+}
