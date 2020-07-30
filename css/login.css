@@ -24,6 +24,25 @@
   }
   .link{
       display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+  }
+  .fa{
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+
+  }
+  .fa a i {
+      font-size: 20px;
+  }
+  .gg{
+    border: 2px solid #fff;
+    padding: 7px;
+    border-radius: 50%;
+    margin-left: 10px;
+    font-size: 17px;
   }
   .login-form .title{
       text-align: center;
@@ -42,6 +61,7 @@
       display: flex;
       justify-content: space-between;
       margin-top: 20px;
+      align-items: center;
   }
   
   

@@ -32,3 +32,38 @@ form {
 .result {
   margin-top: 10px;
 }
+input{
+  outline: none;
+  background: #fff;
+}
+#app{
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  height: 100%;
+  color: #fff;
+}
+.pt-4, .py-4 {
+  padding-top: 1.5rem!important;
+  background: limegreen;
+  background: #3e4551;
+  color: #FFF;
+}
+#list-video{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  
+}
+iframe{
+  width: 94%;
+}
+.comment{
+  display: flex;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+}
+#div{
+  margin-top: 30px;
+}

@@ -10,17 +10,18 @@
     width: 50%;
 }
 .web-films{
-    background: black;
+    /* background: black; */
     color: #fff;
 }
 .content-detail{
-    width: 85%;
-    margin: auto;
+ 
     display: flex;
     flex-direction: column;
 }
 .content-detail .noidung{
     display: flex;
+    width: 95%;
+    margin: auto;
     padding: 10px;
 }
 .content-film{
@@ -29,6 +30,7 @@
 }
 .content-film h1{
     margin: 0;
+    color: #ff7600;
 }
 .mt-2, .my-2 {
     margin-top: .5rem!important;
@@ -36,7 +38,7 @@
 }
 .carousel-inner {
     position: relative;
-    width: 85%;
+    width: 100%;
     overflow: hidden;
     margin: auto;
 }
@@ -54,4 +56,32 @@
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+video{
+    width: 100%;
+}
+#search input{
+    height: 100%;
+}
+#search button{
+    width: 55px;
+}
+#search{
+    display: flex;
+    width: 41%;
+    height: 43px;
+}
+#myForm input{
+    width: 100%;
+    padding: 13px 9px 54px;
+
+}
+#myForm{
+    display: flex;
+    width: 93%;
+    margin: auto;
+    
+}
+.name-header a {
+    text-decoration: none;
 }

@@ -8,17 +8,19 @@
 
 .register-container .register-form {
   width: 50%;
-  height: 420px;
+  height: auto;
   margin: auto;
   background: initial;
   border-radius: 7px;
-
   padding: 20px;
   color: white;
   box-shadow: 0 0 15px #ffffff;
 }
 #form-register{
   margin-top: 10px;
+}
+.register-form h2 {
+  text-align: center;
 }
 .register-form .title{
   text-align: center;
@@ -39,7 +41,8 @@
   justify-content: space-between;
 }
 .register-form .submit-wrapper{
-  margin-top: 20px;
+  /* margin-top: 20px; */
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }

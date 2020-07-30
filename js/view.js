@@ -38,13 +38,15 @@ view.setActiveScreen = (screenName) => {
         });
       break;
     case "HomeScreen":
+
       document.getElementById("app").innerHTML = components.HomeScreen;
-      if (model.currentUser.email) {
+
+      if (model.currentUser.email && model.currentUser.email !== "thosanthanhpho404@gmail.com") {
         document.getElementById("welcome").innerHTML =
           model.currentUser.displayName;
         document.getElementById("SingInBtn").style.display = "none";
         document.getElementById("logout").innerText = "Log out";
-      } else if (model.currentUser.email !== "quanganh406@gmail.com") {
+      } else if (model.currentUser.email === "thosanthanhpho404@gmail.com") {
         document.getElementById("SingInBtn").innerText = "Sign In";
         document.getElementById("logout").innerText = "Sign Up";
       }
@@ -63,10 +65,33 @@ view.setActiveScreen = (screenName) => {
       model.loadConversations();
       break;
     case "details":
-   
+      
       document.getElementById("app").innerHTML = components.details;
-      // document.getElementById("web-film").style.background = `url(${model.currentFilm.bgFilm})`;
-      document.getElementById("list-films").innerHTML = model.currentFilm.content;
+      
+      if (model.currentUser.email && model.currentUser.email !== "thosanthanhpho404@gmail.com") {
+        document.getElementById("welcome").innerHTML =
+          model.currentUser.displayName;
+        document.getElementById("SingInBtn").style.display = "none";
+        document.getElementById("logout").innerText = "Log out";
+      } else if (model.currentUser.email === "thosanthanhpho404@gmail.com") {
+        document.getElementById("SingInBtn").innerText = "Sign In";
+        document.getElementById("logout").innerText = "Sign Up";
+      }
+      var logoutBtn = document.getElementById("SingInBtn");
+      logoutBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        firebase.auth().signOut();
+        view.setActiveScreen("loginScreen");
+      });
+      var logoutBtn = document.getElementById("logout");
+      logoutBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        firebase.auth().signOut();
+        view.setActiveScreen("loginScreen");
+      });
+      document.getElementById("background").style.background = `url(${model.currentFilm.bgFilm})`
+      document.getElementById("list-films").innerHTML = model.currentFilm.content
+
       document.getElementById("list-image").innerHTML = `<img src="${model.currentFilm.image}" >`;
       document.getElementById("list-video").innerHTML = model.currentFilm.video;
       document.getElementById("list-name").innerHTML = model.currentFilm.Name;
@@ -76,9 +101,7 @@ view.setActiveScreen = (screenName) => {
       home.addEventListener("click", (e) => {
         view.setActiveScreen("HomeScreen");
       });
-      // document.getElementById('go').addEventListener('click', (e) => {
-      //   view.setActiveScreen('details')
-      // })
+    
       break;
   }
 };
@@ -95,7 +118,7 @@ view.addMessage = (message) => {
     <p>${message.Name}</p>
     <p>${message.title}</p>
     `;
-  } else if (model.currentUser.email !== "quanganh406@gmail.com") {
+  } else if (model.currentUser.email === "thosanthanhpho404@gmail.com") {
     filmWrapper.innerHTML = `
     <a id="go" href="#"><img src="${message.image}"></a>
     <h3>${message.content}</h3>
@@ -103,6 +126,7 @@ view.addMessage = (message) => {
     <p>${message.title}</p>
     `;
   }
+  
   const listMessage = document.querySelector(".list-film");
   listMessage.appendChild(filmWrapper);
   filmWrapper.addEventListener("click", (e) => {
@@ -118,7 +142,6 @@ view.showCurrentConversation = () => {
   }
 };
 
-document.getElementById("list-films").innerHTML = `${message.Name}`;
  
 
 

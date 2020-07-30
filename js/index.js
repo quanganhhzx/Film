@@ -25,7 +25,7 @@ window.onload = () => {
         alert('Please verify your email')
       }
     } else {
-      view.setActiveScreen('registerScreen')
+      view.setActiveScreen('loginScreen')
     }
   })
 }
